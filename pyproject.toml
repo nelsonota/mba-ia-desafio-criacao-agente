@@ -1,0 +1,23 @@
+[project]
+name = "residencial-aurora-assistant"
+version = "0.1.0"
+description = "Assistente do Residencial Aurora para o desafio Full Cycle."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "google-adk[db]==2.6.1",
+    "google-genai>=2.9,<3",
+    "greenlet>=3,<4",
+    "python-dotenv>=1,<2",
+    "uvicorn[standard]>=0.34,<1",
+]
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/residencial_aurora"]
+
+[tool.uv]
+package = true
